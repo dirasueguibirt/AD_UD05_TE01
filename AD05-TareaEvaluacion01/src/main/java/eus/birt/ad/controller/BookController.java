@@ -51,5 +51,12 @@ public class BookController {
 		return "bookForm";
 	}
 	
+	@PostMapping("/edit/{id}")
+	public String submitEditForm(@PathVariable("id") Long id, @ModelAttribute Book book) {
+	    book.setId(id);
+	    bookRepository.save(book);
+	    return "redirect:/books";
+	}
+	
 
 }

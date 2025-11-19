@@ -26,7 +26,7 @@ public class BootStrapData implements CommandLineRunner{
 	public void run(String... arg0) throws Exception {
         //creamos el genero primero
         Genre thriller = new Genre("Thriller");
-        Genre fantasy = new Genre("Fantasy");
+        Genre fantasy = new Genre("Fantasia");
         genreRepository.save(thriller);
         genreRepository.save(fantasy);
         System.out.println("Number of genres: " + genreRepository.count());

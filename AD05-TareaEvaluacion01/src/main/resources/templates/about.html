@@ -1,23 +1,60 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Library about</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" th:href="@{style.css}" />
-    </head>
-    <body>
-    <div th:replace="fragments/header :: header"></div>
-    	<!-- Page content-->
-        <div class="container">
-            <div class="text-center mt-5">
-                <p class="lead">esta es la entrega de la tarea evaluativa de la UD05 de Acceso a Datos.</p>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LibraryDB - Sobre el proyecto</title>
+
+    <!-- Bootstrap 5.3 + Icons (igual que en todas las páginas) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body class="bg-light">
+
+<div th:replace="~{fragments/header :: header}"></div>
+
+<!-- Hero / Portada "About" -->
+<section class="py-5 bg-primary text-white">
+    <div class="container px-5 my-5">
+        <div class="text-center">
+            <i class="bi bi-info-circle-fill display-1 mb-4 opacity-75"></i>
+            <h1 class="display-4 fw-bolder">Sobre este proyecto</h1>
+            <p class="lead fw-normal mb-0">
+                Esta es la entrega de la tarea evaluativa de la UD05 de Acceso a Datos.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-5 bg-white">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6">
+                <div class="text-center">
+                    <h2 class="fw-bolder text-primary mb-4">Funcionalidades implementadas</h2>
+                    <ul class="list-group list-group-flush fs-5 text-start mx-auto" style="max-width: 600px;">
+                        <li class="list-group-item"><i class="bi bi-check2 text-success me-2"></i>CRUD completo de Libros y Géneros</li>
+                        <li class="list-group-item"><i class="bi bi-check2 text-success me-2"></i>Relación bidireccional OneToMany / ManyToOne</li>
+                        <li class="list-group-item"><i class="bi bi-check2 text-success me-2"></i>Spring Data JPA + Thymeleaf</li>
+                        <li class="list-group-item"><i class="bi bi-check2 text-success me-2"></i>Diseño responsive con Bootstrap 5</li>
+                        <li class="list-group-item"><i class="bi bi-check2 text-success me-2"></i>Validación de formularios</li>
+                    </ul>
+                </div>
             </div>
         </div>
-      <div th:replace="fragments/footer :: footer"></div>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    </body>
+    </div>
+</section>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
 </html>
