@@ -1,0 +1,36 @@
+body {
+    background: linear-gradient(to bottom, #f8f1e9 0%, #e8dcc9 100%);
+    background-attachment: fixed;
+    font-family: 'Georgia', serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url('https://www.transparenttextures.com/patterns/subtle-white-feathers.png');
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+/* Estilo personalizado para el botón */
+.btn-primary {
+    background-color: #d7b7a9; /* Un tono suave y cálido que complementa el fondo */
+    border-color: #b68a7c;     /* Un borde ligeramente más oscuro */
+    color: white;              /* Asegúrate de que el texto sea legible */
+    font-family: 'Georgia', serif; /* Usar la misma fuente para coherencia */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efecto hover */
+.btn-primary:hover {
+    background-color: #b68a7c;  /* Un tono más oscuro al pasar el ratón */
+    border-color: #9a6a58;      /* Un borde más oscuro al pasar el ratón */
+    color: white;               /* Mantener el texto blanco al pasar el ratón */
+}
+
+/* Efecto active (cuando se hace clic) */
+.btn-primary:active {
+    background-color: #a07866; /* Un tono aún más oscuro cuando se hace clic */
+    border-color: #8b5a47;     /* Borde más oscuro cuando se hace clic */
+}
